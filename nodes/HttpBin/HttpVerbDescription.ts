@@ -22,7 +22,20 @@ export const httpVerbOperations: INodeProperties[] = [
 					request: {
 						method: 'GET',
 						url: '/get',
+
 					},
+					output: {
+						postReceive: [
+							{
+								// When the returned data is nested under another property
+								// Specify that property key
+								type: 'rootProperty',
+								properties: {
+									property: 'headers',
+								},
+							},
+						]
+					}
 				},
 			},
 			{
@@ -217,6 +230,7 @@ const deleteOperation: INodeProperties[] = [
 						type: 'string',
 						default: '',
 						routing: {
+
 							send: {
 								property: '={{$parent.key}}',
 								type: 'body',
