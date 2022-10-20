@@ -29,6 +29,7 @@ export class HttpBin implements INodeType {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
 			},
+
 		},
 		/**
 		 * In the properties array we have two mandatory options objects required
