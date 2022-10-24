@@ -12,6 +12,7 @@ export class HttpBin implements INodeType {
 		description: 'Interact with HttpBin API',
 		defaults: {
 			name: 'HttpBin',
+			// eslint-disable-next-line n8n-nodes-base/node-class-description-non-core-color-present
 			color: '#3b4151',
 		},
 		inputs: ['main'],
